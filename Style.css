@@ -1,0 +1,357 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7e4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Stack header, content, and footer vertically */
+    min-height: 100vh;  /* Ensure the body takes at least the full height of the viewport */
+}
+
+/* Menu container */
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #d9fdd3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.045);
+    z-index: 1000;
+}
+
+/* Styling links */
+.menu a {
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #d9fdd3;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #2e8b57;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+}
+
+.dropdown button {
+    background-color: #d9fdd3;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.dropdown button:hover {
+    background-color: #2e8b57;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d9fdd3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: green;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #2e8b57;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #d9fdd3;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.footer a {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Main section */
+main {
+    padding-top: 2.5%;
+    background-color: #f9f9f9;
+}
+
+/* Project Sections */
+.project-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+.project-section h2 {
+    color: green;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more:hover {
+    background-color: #0f6a36;
+}
+
+/* Project Gallery styling */
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.project-gallery img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    object-position: center;
+}
+
+/* Container to hide overflowed image */
+.project-gallery .image-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Hover effect to zoom image */
+.project-gallery img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.project-gallery img:hover {
+    filter: brightness(80%);
+}
+
+/* Project Gallery Landscape*/
+.project-gallery-Landscape {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.project-gallery-Landscape img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    object-position: center;
+}
+
+/* Container to hide overflowed image */
+.project-gallery-Landscape .image-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Hover effect to zoom image */
+.project-gallery-Landscape img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* Optional: You can apply a dark overlay to make the zoom effect more pronounced */
+.project-gallery-Landscape img:hover {
+    filter: brightness(95%);
+}
+
+/* Description Page Styling */
+.description-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Headings */
+.description-page h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.description-page h2 {
+    font-size: 1.6rem;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #d9fdd3;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.description-page p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 10px 0 20px;
+}
+
+/* Lists */
+.description-page ul {
+    list-style-type: disc;
+    margin: 10px 0 20px 40px;
+    color: #666;
+}
+
+.description-page li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Call-to-Action Button */
+.description-page .cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.description-page .cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* About Page Styling */
+.about-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Image Styling */
+.about-page img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.about-page h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.about-page p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 10px 0 20px;
+    text-align: justify;
+}
